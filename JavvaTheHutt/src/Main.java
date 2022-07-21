@@ -44,7 +44,7 @@ public class Main {
         }*/
         /////////////////////////////////////////////////////////////////////Vetores e arrays
         //com tamanho declarado:
-        int[] num = new int[5];
+        /*int[] num = new int[5];
         num[0] = 1;
         num[1] = 2;
         num[2] = 3;
@@ -56,6 +56,20 @@ public class Main {
         //com conteúdo declarado:
         String[] coisas = { "seila", "Num sei", "Sem ideia mano"};
         System.out.println(Arrays.toString(coisas));
-        //não pode misturar tipos dentro do array
+        //não pode misturar tipos dentro do array*/
+
+        //////////////////////////////////////////////////////////////////////////Funções
+        /*String nome = "Severina";
+        saudacao(nome);
+    }
+        public static void saudacao(String jubileu){
+        System.out.println("Hello, " + jubileu);
+    }
+*/
+        int resultado = soma(2, 3);
+        System.out.println(resultado);
+    }
+    public static int soma (int a, int b){
+        return a + b;
     }
 }
