@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.TextStyle;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Main {
@@ -32,14 +33,29 @@ public class Main {
         System.out.printf("Ola, %s. Hoje e %s, %s", nome, diaSemana, saudacao.toUpperCase());
         //printf faz quebra de linha automática*/
 
-        //Laços numéricos
+        //////////////////////////////////////////////////////////////////////////Laços numéricos
         //1 2 3 4 5 6 7 8 9 10
         //para uma variável que inicia em 1 e vai até 10, somando 1 por 1, faça:
-        for (int i = 1; i <=10; i++){
+        /*for (int i = 1; i <=10; i++){
             // é possivel abrir um laço numérico dentro de um laço numérico
             for (int j = 1; j <=10; j++) {
             System.out.println(i + "x" + j + " = " + i * j);
             }
+        }*/
+        /////////////////////////////////////////////////////////////////////Vetores e arrays
+        //com tamanho declarado:
+        int[] num = new int[5];
+        num[0] = 1;
+        num[1] = 2;
+        num[2] = 3;
+        num[3] = 4;
+        num[4] = 5;
+        for (int i=0; i < num.length;i++){
+            System.out.println(num[i]);
         }
+        //com conteúdo declarado:
+        String[] coisas = { "seila", "Num sei", "Sem ideia mano"};
+        System.out.println(Arrays.toString(coisas));
+        //não pode misturar tipos dentro do array
     }
 }
