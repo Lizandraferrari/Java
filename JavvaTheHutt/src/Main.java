@@ -8,7 +8,7 @@ public class Main {
         //Olá, (nome). Hoje é dia (dia da semana). Tenha um bom dia.
         //vamos fazer um import para trazer a data de hoje numa variável.
         //import java.time.LocalDate;
-        String nome = "Lizandra";
+        /*String nome = "Lizandra";
         //Utiliza o padrão mundial de leitura de data, da ISO 8601 (ano/mes/dia)
         LocalDate hoje = LocalDate.now();
         //Por padrão, se pedir para exibir dia da semana, vai aparecer em inglês. Então temos que
@@ -30,6 +30,16 @@ public class Main {
             saudacao = "fodase";
         }
         System.out.printf("Ola, %s. Hoje e %s, %s", nome, diaSemana, saudacao.toUpperCase());
-        //printf faz quebra de linha automática
+        //printf faz quebra de linha automática*/
+
+        //Laços numéricos
+        //1 2 3 4 5 6 7 8 9 10
+        //para uma variável que inicia em 1 e vai até 10, somando 1 por 1, faça:
+        for (int i = 1; i <=10; i++){
+            // é possivel abrir um laço numérico dentro de um laço numérico
+            for (int j = 1; j <=10; j++) {
+            System.out.println(i + "x" + j + " = " + i * j);
+            }
+        }
     }
 }
