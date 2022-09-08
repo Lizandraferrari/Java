@@ -3,6 +3,9 @@ import java.time.LocalDateTime;
 import java.time.format.TextStyle;
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Scanner;
+
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 public class Main {
     public static void main(String[] args) {
@@ -66,10 +69,20 @@ public class Main {
         System.out.println("Hello, " + jubileu);
     }
 */
-        int resultado = soma(2, 3);
+      /*  int resultado = soma(2, 3);
         System.out.println(resultado);
     }
     public static int soma (int a, int b){
         return a + b;
     }
-}
+}*/
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Vamos calcular a área de um retângulo?");
+        System.out.print("Escreva o valor da altura: ");
+        int altura = sc.nextInt();
+        System.out.print("\nEscreva o valor da base: ");
+        int base = sc.nextInt();
+        int area = altura * base;
+        System.out.print("\nO valor da área desse retângulo é: " + area);
+    }
+    }
