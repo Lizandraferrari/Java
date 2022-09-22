@@ -1,7 +1,4 @@
-import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -26,18 +23,38 @@ public class Main {
         Bolo  5,00
         Rosca  6,00
         Café  1,00
-
         */
         Scanner cad = new Scanner(System.in);
         ArrayList<String> produto = new ArrayList();
         ArrayList<Double> valor = new ArrayList();
-        for (int cont = 1; cont <=10; cont++){
+        for (int cont = 1; cont <= 2; cont++) {
             System.out.println("\nDigite o nome do produto: ");
             produto.add(cad.next());
 
-            System.out.println("Digite o valor com desconto do produto: ");
+            System.out.println("Digite o valor do produto: ");
             valor.add(cad.nextDouble());
         }
-        System.out.println(produto +" em promoção por respectivamenteR$"+valor);
+        System.out.println("Digite o valor do desconto do produto: ");
+        int desconto = cad.nextInt();
+        double descontaum = desconto / 100.0;
+        ArrayList<Double> valorFinal = new ArrayList();
+
+        for (int desc = 0 ; desc < valor.size() ; desc++){
+            System.out.println(valor.get(desc));            //teste
+            double antibug = valor.get(desc);
+            System.out.println(antibug);                    //teste
+            //erro
+            System.out.println(desconto);                    //teste
+            System.out.println(descontaum);                    //teste
+            double conta = antibug * descontaum;
+            System.out.println(conta);                      //teste
+            valorFinal.add(conta);
+            System.out.println(valorFinal.get(desc));       //teste
+            System.out.println(conta);                      //teste
+            //fim do erro
+        }
+        for (int i = 0 ; i < produto.size() ; i++){
+            System.out.println(produto.get(i) + " em promoção por R$" + valorFinal.get(i) + "!!");
+        }
     }
 }
