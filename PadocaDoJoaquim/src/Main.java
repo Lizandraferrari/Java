@@ -27,34 +27,25 @@ public class Main {
         Scanner cad = new Scanner(System.in);
         ArrayList<String> produto = new ArrayList();
         ArrayList<Double> valor = new ArrayList();
-        for (int cont = 1; cont <= 2; cont++) {
+        for (int cont = 1; cont <= 10; cont++) {
             System.out.println("\nDigite o nome do produto: ");
             produto.add(cad.next());
-
             System.out.println("Digite o valor do produto: ");
             valor.add(cad.nextDouble());
         }
-        System.out.println("Digite o valor do desconto do produto: ");
+        System.out.println("Digite o quantidade de desconto do produto em número: ");
         int desconto = cad.nextInt();
-        double descontaum = desconto / 100.0;
-        ArrayList<Double> valorFinal = new ArrayList();
+        double descontaum = (double) desconto / 100.0;
 
-        for (int desc = 0 ; desc < valor.size() ; desc++){
-            System.out.println(valor.get(desc));            //teste
-            double antibug = valor.get(desc);
-            System.out.println(antibug);                    //teste
-            //erro
-            System.out.println(desconto);                    //teste
-            System.out.println(descontaum);                    //teste
-            double conta = antibug * descontaum;
-            System.out.println(conta);                      //teste
-            valorFinal.add(conta);
-            System.out.println(valorFinal.get(desc));       //teste
-            System.out.println(conta);                      //teste
-            //fim do erro
+        for (int cont = 0 ; cont < valor.size() ; cont++){
+            double antibug = valor.get(cont);
+            descontaum = (antibug * descontaum);
+            valor.set(cont , descontaum);
+            descontaum = (double) desconto / 100.0; //reseta o valor do desconto para não acumular
         }
-        for (int i = 0 ; i < produto.size() ; i++){
-            System.out.println(produto.get(i) + " em promoção por R$" + valorFinal.get(i) + "!!");
+        for (int cont = 0 ; cont < produto.size() ; cont++){
+            System.out.println(produto.get(cont) + " em promoção por R$" +
+                    String.format("%.2f",valor.get(cont)) + "!!");
         }
     }
 }
