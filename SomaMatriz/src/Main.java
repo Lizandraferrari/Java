@@ -12,19 +12,30 @@ Elabore o pseudocódigo e a codificação em linguagem Java de um software que r
         int matriz3 [][] = new int [4][4];
 
         JOptionPane.showMessageDialog(null, "Escreva os valores presentes na matriz A. ");
+        try{
         for (linha = 0; linha<4; linha++){
             for (coluna = 0; coluna<4; coluna++){
                 matriz1[linha][coluna] = Integer.parseInt(JOptionPane.showInputDialog("Escreva o valor inserido em " +
-                         + linha+1 + " x "+ coluna+1 +" da matriz A: "));
+                         + (linha+1) + " x "+ (coluna+1) +" da matriz A: "));
             }
+            }
+        }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Por favor digite um valor válido",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
         }
         JOptionPane.showMessageDialog(null, "Escreva os valores presentes na matriz B. ");
-        for (linha = 0; linha<4; linha++){
-            for (coluna = 0; coluna<4; coluna++){
-                matriz2[linha][coluna] = Integer.parseInt(JOptionPane.showInputDialog("Escreva o valor inserido em "
-                +linha+1+ " x " +coluna+1+ " da matriz B:"));
+        try {
+            for (linha = 0; linha < 4; linha++) {
+                for (coluna = 0; coluna < 4; coluna++) {
+                    matriz2[linha][coluna] = Integer.parseInt(JOptionPane.showInputDialog("Escreva o valor inserido em "
+                            + (linha + 1) + " x " + (coluna + 1) + " da matriz B:"));
+                }
             }
+        }catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Por favor digite um valor válido.",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
         }
+
         for (linha = 0; linha<4; linha++){
             for (coluna = 0; coluna<4; coluna++) {
                 int controle = matriz1[linha][coluna] + matriz2[linha][coluna];
