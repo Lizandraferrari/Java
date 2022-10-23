@@ -3,13 +3,16 @@ package Classes;
 import javax.swing.*;
 
 public class Aluno extends Pessoa {
-    String registroAluno;
+    public static String registroAluno;
+
     int av1;
     int av2;
     int notaParcial = (av1+av2)/2;
     int frequencia;
     String recuperacao;
     int provaRecuperacao;
+
+    String matricula [][] = new String[1][9];
 
     @Override
     public String get() {
@@ -41,5 +44,8 @@ public class Aluno extends Pessoa {
         }
         return recuperacao;
     }
-
+    public int getProvaRecuperacao() {
+        provaRecuperacao = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota da AV1: "));
+        return provaRecuperacao;
+    }
 }

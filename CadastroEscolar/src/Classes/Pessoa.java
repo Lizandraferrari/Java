@@ -3,16 +3,24 @@ package Classes;
 import javax.swing.*;
 
 public abstract class Pessoa {
-    String nome;
-    String endereco;
-    int telefone;
-    String curso;
-    String turma;
+    public String nome;
+    public String endereco;
+    public int telefone;
+    public String curso;
+    public String turma;
+    public static Boolean existe;
 
 
     public String getNome() {
         nome = JOptionPane.showInputDialog("Digite o nome: ");
-        return nome;
+        if (nome.toLowerCase().contains(nome.toLowerCase())){
+            existe = true;
+            JOptionPane.showMessageDialog(null, nome+" já cadastrado");
+            return nome;
+        }else {
+            existe = false;
+            return nome;
+        }
     }
 
     public String getEndereco() {

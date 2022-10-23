@@ -32,6 +32,18 @@ public class Main {
                     }
                     case 3:{
                         matricular.getNome();
+                        if (Pessoa.existe == true){
+                        JOptionPane.showMessageDialog(null, matricular.nome +
+                                matricular.endereco + matricular.telefone + matricular.curso +
+                                matricular.turma + Aluno.registroAluno);
+                        }else{
+                            matricular.getEndereco();
+                            matricular.getCurso();
+                            matricular.getTelefone();
+                            matricular.getTurma();
+                            matricular.get();
+                        }
+
 
                     }
                     case 4:{
